@@ -24,7 +24,7 @@ New signature for `registry.on_off_states`:
     ...
 ```
 
-Example `group.py` for the `vacuum` entity platform registering alternative `ON`/`OFF` states. Note the the first `ON` state now is considered to be the default `ON` state.
+Example `group.py` for the `vacuum` entity platform registering alternative `ON`/`OFF` states. Note the first `ON` state is now considered to be the default `ON` state.
 
 ```python
 """Describe group states."""
