@@ -7,7 +7,7 @@ title: Changes in setup entity platforms with group integration
 
 ## Changes in setup entity platforms with group integration
 
-By default, the `group` integration allows entities to be grouped. If the default `ON`/`OFF` states for an entity default to `on` and `off`, then `grouping` is supported by default. The setup changes, though, for Entity platforms that can be grouped but have alternative states, e.g., `cover` (`open`/`closed`) or `person` (`home`/`not_home`), or platforms that are meant to be excluded, such as `sensor`. These entity platforms must implement `async_describe_on_off_states` in the `group.py` module.
+By default, the `group` integration allows entities to be grouped. If the default `ON`/`OFF` states for an entity default to `on` and `off`, then `grouping` is supported by default. Now, some Entity platforms must also implement `async_describe_on_off_states` in the `group.py` module. This applies to entities that can be grouped but have alternative states, e.g., `cover` (`open`/`closed`) or `person` (`home`/`not_home`), or platforms that are meant to be excluded, such as `sensor`.
 
 In `async_describe_on_off_states`, the `domain` needs to be the first argument passed to the `registry` methods `on_off_states` and `exclude_domain`. When registering alternative `ON`/`OFF` states with `registry.on_off_state`, in addition to the `ON` states, the default `ON` state needs to be passed.
 
